@@ -175,7 +175,7 @@ class SerialRobot(object):
             Tf = Tf.dot(T)
         return Tf
 
-    def plot(self, ax, q, ee=True, axlimits=None, elev=25, azim=45, ascale=0.4, cscale=0.1, radius=0.05, color='g', lw=3):
+    def plot(self, ax, q, ee=True, axlimits=None, elev=25, azim=45, ascale=0.4, cscale=0.1, radius=0.05, color='g', lw=3, colab=False):
         """
         Basic plot of the robot using lines and showing the joints with green "cylinders"
         
@@ -228,7 +228,8 @@ class SerialRobot(object):
                 pcnt+=1
         # Clear the figure
         # plt.clf(); ax = plt.axes(projection='3d')
-        ax.cla()
+        if (not colab):
+            ax.cla()
         # Names for the axes
         ax.set_xlabel('x'); ax.set_ylabel('y'); ax.set_zlabel('z')
         # Points (base of the robot)
