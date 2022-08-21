@@ -191,6 +191,7 @@ class SerialRobot(object):
 		   radius - radius of the cylinders
 		   color - color for the cylinders
 		   lw - width of the lines joining the joints
+           colab - True when using Google Colab
            
         """
         # Compute intermediate DH homogeneous transformations
