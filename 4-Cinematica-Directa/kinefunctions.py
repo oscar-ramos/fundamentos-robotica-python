@@ -42,6 +42,8 @@ def Trasl(x, y, z):
     return T
 
 def skew(w):
+    """ Matriz antisimétrica (skew) a partir de un vector
+    """
     S = np.array([[0., -w[2], w[1]],
                   [w[2], 0., -w[0]],
                   [-w[1], w[0], 0.]])
