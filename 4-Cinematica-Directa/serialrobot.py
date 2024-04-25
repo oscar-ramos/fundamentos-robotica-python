@@ -234,7 +234,7 @@ class SerialRobot(object):
         # Names for the axes
         ax.set_xlabel('x'); ax.set_ylabel('y'); ax.set_zlabel('z')
         # Points (base of the robot)
-        ax.scatter(0, 0, 0, color='g', s=50)
+        # ax.scatter(0, 0, 0, color='g', s=50)
         # Body of the robot
         ax.plot([0, self.p[0][0]], [0, self.p[0][1]], [0, self.p[0][2]], linewidth=lw, color='k')
         for k in range(1, len(self.p)):
